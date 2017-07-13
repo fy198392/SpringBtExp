@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>测试页面</title>
+</head>
+<body class="theme-page">
+	<section>
+	<div class="wrapper" style="text-align:center;">
+	
+	</div>
+		<div class="wrapper">
+			<img class="ima"  th:src="|${#httpServletRequest.contextPath }/static/images/manage_icon.png|" style="width: 200px;  height: 200px ;"/>
+			
+			<h1 ><span style="color:red ;">这是一个测试!</span></h1>
+			</div>
+	</section>
+
+</body>
+</html>

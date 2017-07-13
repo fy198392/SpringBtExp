@@ -1,0 +1,25 @@
+.button_add {
+    	margin-bottom: 5px;
+ }
+ 
+.button_indexsearch {
+    	margin: 15px;
+ }
+ 
+.searchDiv {
+    	margin-bottom: 6px;
+ }
+ 
+.cr { list-style-type: none;}
+.lir { 
+	display: inline-block;
+	/*margin: 10px 0;*/
+}
+
+.menuname_one{
+	margin-left: 60px
+}
+
+.menuname_two{
+	margin-left: 100px
+}

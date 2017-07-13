@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shinefy.project.mapper.TestTableMapper">
+
+	<resultMap id="testTableMap" type="testTable">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="sumScore" column="score_sum" />
+		<result property="avgScore" column="score_avg" />
+		<result property="age" column="age" />
+	</resultMap>
+
+	<select id="getById" resultMap="testTableMap" resultType="TestTable">
+		SELECT *
+		FROM Test_Table
+		WHERE ID = #{id}
+	</select>
+
+	<insert id="add" parameterType="TestTable">
+		INSERT
+			INTO Test_Table(NAME,SCORE_SUM,SCORE_AVG,AGE)
+		VALUES
+			(#{name},#{sumScore},#{avgScore},#{age})
+	</insert>
+
+	<select id="likeName" resultMap="testTableMap" parameterType="string" resultType="list">
+		SELECT *
+		FROM Test_Table
+		WHERE NAME LIKE CONCAT('%',#{name},'%')
+	</select>
+
+	<select id="getNameById" resultType="string">
+		SELECT NAME
+		FROM Test_Table
+		WHERE ID = #{id}
+	</select>
+</mapper>
