@@ -76,7 +76,7 @@ public class ShinefySpringBootApplication extends SpringBootServletInitializer
 		container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND , "/error404"));
         container.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR,"/error500"));
         container.addErrorPages(new ErrorPage(HttpStatus.UNAUTHORIZED,"/error403"));
-		container.setContextPath("/test");
+		container.setContextPath("/SpringbootPro");
 	}
 
 	 @Resource(name="transactionManager")
